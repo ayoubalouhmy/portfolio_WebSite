@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  --bg-main: #f8fafc;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --accent-purple: #6b21a8;
+  --accent-cyan: #0284c7;
+  --panel-bg: rgba(255, 255, 255, 0.85);
+  --panel-border: rgba(0, 0, 0, 0.08);
+  --surface-bg: rgba(241, 245, 249, 0.9);
+  --nav-bg: rgba(255, 255, 255, 0.9);
+  --card-bg: #ffffff;
+  --sub-panel: #f1f5f9;
+}
+
+.dark {
+  --bg-main: #0b1326;
+  --text-main: #dae2fd;
+  --text-muted: #cbc3d7;
+  --accent-purple: #d0bcff;
+  --accent-cyan: #4cd7f6;
+  --panel-bg: rgba(31, 41, 55, 0.4);
+  --panel-border: rgba(255, 255, 255, 0.1);
+  --surface-bg: rgba(23, 31, 51, 0.6);
+  --nav-bg: rgba(11, 19, 38, 0.9);
+  --card-bg: #171f33;
+  --sub-panel: #222a3d;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@layer utilities {
+  .font-serif-italic {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+  }
+
+  .font-sans-inter {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .surface-glass {
+    background-color: var(--surface-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--panel-border);
+  }
+
+  .glass-panel {
+    background-color: var(--panel-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--panel-border);
+  }
+
+  .input-glow:focus {
+    border-bottom-color: var(--accent-cyan);
+    box-shadow: 0 1px 0 0 var(--accent-cyan);
+  }
+}
+
+@keyframes pulse-green {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+  70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.badge-pulse {
+  animation: pulse-green 2s infinite;
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sub-panel);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--panel-border);
+}
+
