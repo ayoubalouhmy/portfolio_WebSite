@@ -18,13 +18,6 @@ export const Hero = ({ onOpenCv, lang }) => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         {/* Left Content Column */}
         <div className="lg:col-span-7 flex flex-col gap-6 z-10">
-          {/* Mobile Availability Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--sub-panel)] border border-[var(--panel-border)] self-start sm:hidden">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 badge-pulse" />
-            <span className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">
-              {navT.available}
-            </span>
-          </div>
 
           {/* Status Badge */}
           <div className="inline-flex items-center gap-2 px-5 py-1.5 rounded-full bg-[var(--sub-panel)] border border-[var(--panel-border)] hidden sm:flex w-34">
@@ -96,9 +89,8 @@ export const Hero = ({ onOpenCv, lang }) => {
               <img
                 src={PROFILE_INFO.heroImage}
                 alt="Ayoub Alouhmy Full Stack Illustration"
-                loading="lazy"
                 decoding="async"
-                className="w-full h-full object-cover rounded-xl transition-transform duration-700 group-hover:scale-105"
+                className="h-140 w-full rounded-xl transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80" />
               

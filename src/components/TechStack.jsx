@@ -1,7 +1,45 @@
 import React, { useState } from 'react';
-import { Code, Database, Wrench, Terminal, Cloud } from 'lucide-react';
+import {
+  Atom,
+  Braces,
+  Cloud,
+  Code,
+  CodeXml,
+  Database,
+  FileCode2,
+  GitBranch,
+  Gitlab,
+  Github,
+  Layers3,
+  Server,
+  Sparkles,
+  SquareTerminal,
+  Terminal,
+  Wand2,
+  Wrench,
+} from 'lucide-react';
 import { TECH_STACK } from '../data/portfolioData';
 import { TRANSLATIONS } from '../data/translations';
+
+const ICON_MAP = {
+  html: CodeXml,
+  css: SquareTerminal,
+  javascript: Braces,
+  bootstrap: Layers3,
+  tailwind: Wand2,
+  react: Atom,
+  node: Server,
+  laravel: Layers3,
+  php: FileCode2,
+  mysql: Database,
+  mongodb: Database,
+  express: Server,
+  python: Code,
+  git: GitBranch,
+  github: Github,
+  vercel: Cloud,
+  gitlab: Gitlab,
+};
 
 export const TechStack = ({ lang }) => {
   const [selectedFilter, setSelectedFilter] = useState('all');
@@ -10,6 +48,11 @@ export const TechStack = ({ lang }) => {
   const frontendSkills = TECH_STACK.filter((item) => item.category === 'frontend');
   const backendSkills = TECH_STACK.filter((item) => item.category === 'backend');
   const toolSkills = TECH_STACK.filter((item) => item.category === 'tools');
+
+  const renderIcon = (tech) => {
+    const Icon = ICON_MAP[tech.icon] || Terminal;
+    return <Icon size={18} className={tech.colorClass || 'text-[var(--accent-cyan)]'} />;
+  };
 
   return (
     <section id="stack" className="px-5 md:px-12 py-20 border-b border-[var(--panel-border)] max-w-[1280px] mx-auto">
@@ -63,7 +106,7 @@ export const TechStack = ({ lang }) => {
                   key={tech.name}
                   className="flex items-center gap-3 glass-panel px-4 py-2.5 rounded-full border border-[var(--panel-border)] hover:border-[var(--accent-purple)]/40 hover:scale-105 transition-all duration-200 cursor-default group"
                 >
-                  {tech.iconClass && <i className={`${tech.iconClass} text-xl`} />}
+                  {renderIcon(tech)}
                   <span className="text-sm font-semibold text-[var(--text-main)] group-hover:text-[var(--accent-purple)]">
                     {tech.name}
                   </span>
@@ -86,7 +129,7 @@ export const TechStack = ({ lang }) => {
                   key={tech.name}
                   className="flex items-center gap-3 glass-panel px-4 py-2.5 rounded-full border border-[var(--panel-border)] hover:border-[var(--accent-cyan)]/40 hover:scale-105 transition-all duration-200 cursor-default group"
                 >
-                  {tech.iconClass && <i className={`${tech.iconClass} text-xl`} />}
+                  {renderIcon(tech)}
                   <span className="text-sm font-semibold text-[var(--text-main)] group-hover:text-[var(--accent-cyan)]">
                     {tech.name}
                   </span>
@@ -109,13 +152,7 @@ export const TechStack = ({ lang }) => {
                   key={tech.name}
                   className="flex items-center gap-3 glass-panel px-4 py-2.5 rounded-full border border-[var(--panel-border)] hover:border-[var(--text-main)]/30 hover:scale-105 transition-all duration-200 cursor-default group"
                 >
-                  {tech.iconClass ? (
-                    <i className={`${tech.iconClass} text-xl`} />
-                  ) : tech.materialIcon === 'terminal' ? (
-                    <Terminal size={18} className="text-[var(--accent-cyan)]" />
-                  ) : (
-                    <Cloud size={18} className="text-emerald-400" />
-                  )}
+                  {renderIcon(tech)}
                   <span className="text-sm font-semibold text-[var(--text-main)] group-hover:text-[var(--accent-purple)]">
                     {tech.name}
                   </span>
