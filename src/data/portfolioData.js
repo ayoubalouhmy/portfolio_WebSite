@@ -13,8 +13,8 @@ export const PROFILE_INFO = {
   email: 'ayoubalouhmy02@gmail.com',
   phone: '+212 7 80 65 15 08',
   location: 'Maroc , CasaBlanca',
-  heroImage: 'public/images/ChatGPT Image 16 août 2026, 23_51_20.png',
-  aboutImage: 'public/images/ChatGPT Image 16 août 2026, 23_51_20.png',
+  heroImage: '/images/ChatGPT Image 16 août 2026, 23_51_20.png',
+  aboutImage: '/images/ChatGPT Image 16 août 2026, 23_51_20.png',
   bioParagraph1: "Formé au développement digital à l'OFPPT, je transforme des idées complexes en solutions web fluides. Mon approche est centrée sur l'équilibre entre une architecture robuste et un design intuitif.",
   bioParagraph2: "Mon passage chez Arm Tech Solutions m'a permis de perfectionner ma maîtrise du cycle de vie complet d'un produit, de la conception initiale au déploiement en production, en passant par l'optimisation des performances.",
 };
