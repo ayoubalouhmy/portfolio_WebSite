@@ -90,6 +90,7 @@ export const Hero = ({ onOpenCv, lang }) => {
                 src={PROFILE_INFO.heroImage}
                 alt="Ayoub Alouhmy Full Stack Illustration"
                 decoding="async"
+                loading="lazy"
                 className="h-140 w-full rounded-xl transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80" />

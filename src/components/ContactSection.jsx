@@ -51,31 +51,29 @@ export const ContactSection = ({ lang }) => {
 
             {/* Contact details */}
             <div className="space-y-5">
-              <a
-                href={`mailto:${PROFILE_INFO.email}`}
-                className="flex items-center gap-4 text-[var(--text-main)] hover:text-[var(--accent-purple)] transition-colors group"
-              >
+              <div className="flex items-center gap-4 text-[var(--text-main)] group">
                 <div className="w-12 h-12 rounded-2xl bg-[var(--sub-panel)] flex items-center justify-center border border-[var(--panel-border)] group-hover:border-[var(--accent-purple)]/50 transition-colors shrink-0">
                   <Mail size={20} className="text-[var(--accent-purple)]" />
                 </div>
                 <div>
                   <p className="text-xs font-semibold text-[var(--text-muted)]">{t.emailLabel}</p>
-                  <a href={`mailto:${PROFILE_INFO.email}`} className='text-sm font-bold'>{PROFILE_INFO.email}</a>
+                  <a href={`mailto:${PROFILE_INFO.email}`} className="text-sm font-bold hover:text-[var(--accent-purple)] transition-colors">
+                    {PROFILE_INFO.email}
+                  </a>
                 </div>
-              </a>
+              </div>
 
-              <a
-                href={`tel:${PROFILE_INFO.phone}`}
-                className="flex items-center gap-4 text-[var(--text-main)] hover:text-[var(--accent-cyan)] transition-colors group"
-              >
+              <div className="flex items-center gap-4 text-[var(--text-main)] group">
                 <div className="w-12 h-12 rounded-2xl bg-[var(--sub-panel)] flex items-center justify-center border border-[var(--panel-border)] group-hover:border-[var(--accent-cyan)]/50 transition-colors shrink-0">
                   <Phone size={20} className="text-[var(--accent-cyan)]" />
                 </div>
                 <div>
                   <p className="text-xs font-semibold text-[var(--text-muted)]">{t.phoneLabel}</p>
-                  <a href={`tel:${PROFILE_INFO.phone}`} className='text-sm font-bold'>{PROFILE_INFO.phone}</a>
+                  <a href={`tel:${PROFILE_INFO.phone}`} className="text-sm font-bold hover:text-[var(--accent-cyan)] transition-colors">
+                    {PROFILE_INFO.phone}
+                  </a>
                 </div>
-              </a>
+              </div>
 
               <div className="flex items-center gap-4 text-[var(--text-main)]">
                 <div className="w-12 h-12 rounded-2xl bg-[var(--sub-panel)] flex items-center justify-center border border-[var(--panel-border)] shrink-0">
