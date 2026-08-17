@@ -58,13 +58,15 @@ export const ProjectsSection = ({ onSelectProject, lang }) => {
               <div className="p-6 md:p-8 flex flex-col justify-between flex-grow gap-6">
                 <div>
                   <div className="text-xs font-bold text-[var(--accent-purple)] tracking-wider uppercase mb-1">
-                    {project.number} • {project.id === 'sakan' ? t.sakanTagline : t.shopflowTagline}
+                    {project.number} • {project.tagline}
                   </div>
+
                   <h3 className="text-2xl md:text-3xl font-bold text-[var(--text-main)] mb-3 group-hover:text-[var(--accent-purple)] transition-colors">
                     {project.title}
                   </h3>
+
                   <p className="text-sm md:text-base text-[var(--text-muted)] leading-relaxed">
-                    {project.id === 'sakan' ? t.sakanDesc : t.shopflowDesc}
+                    {project.description}
                   </p>
                 </div>
 

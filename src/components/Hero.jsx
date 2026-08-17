@@ -58,13 +58,14 @@ export const Hero = ({ onOpenCv, lang }) => {
               <span>{t.contactMe}</span>
             </a>
 
-            <button
-              onClick={onOpenCv}
-              className="bg-[var(--sub-panel)] border border-[var(--panel-border)] text-[var(--text-main)] hover:border-[var(--accent-purple)]/40 font-bold py-3.5 px-6 rounded-xl transition-all duration-200 text-center flex items-center justify-center gap-2 active:scale-[0.98]"
-            >
+            <a href="/AyoubAlouhmy (2).pdf" download className="bg-[var(--sub-panel)] border border-[var(--panel-border)] text-[var(--text-main)] hover:border-[var(--accent-purple)]/40 font-bold py-3.5 px-6 rounded-xl transition-all duration-200 text-center flex items-center justify-center gap-2 active:scale-[0.98]">
               <Download size={18} />
               <span>{t.downloadCv}</span>
-            </button>
+            </a>
+              
+            
+              
+            
           </div>
 
           {/* Stats Bar */}

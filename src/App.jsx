@@ -6,7 +6,6 @@ import { TechStack } from './components/TechStack';
 import { ProjectsSection } from './components/ProjectsSection';
 import { ExperienceSection } from './components/ExperienceSection';
 import { ContactSection } from './components/ContactSection';
-import { CVModal } from './components/CVModal';
 import { Footer } from './components/Footer';
 
 export default function App() {
@@ -70,8 +69,6 @@ export default function App() {
       {/* Footer */}
       <Footer />
 
-      {/* CV Download / Preview Modal */}
-      <CVModal isOpen={isCvOpen} onClose={() => setIsCvOpen(false)} lang={lang} />
     </div>
   );
 }

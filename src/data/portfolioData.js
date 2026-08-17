@@ -13,8 +13,8 @@ export const PROFILE_INFO = {
   email: 'ayoubalouhmy02@gmail.com',
   phone: '+212 7 80 65 15 08',
   location: 'Maroc , CasaBlanca',
-  heroImage: '/images/ChatGPT Image 16 août 2026, 23_51_20.webp',
-  aboutImage: '/images/ChatGPT Image 16 août 2026, 23_51_20.webp',
+  heroImage: '/images/about.webp',
+  aboutImage: '/images/about.webp',
   bioParagraph1: "Formé au développement digital à l'OFPPT, je transforme des idées complexes en solutions web fluides. Mon approche est centrée sur l'équilibre entre une architecture robuste et un design intuitif.",
   bioParagraph2: "Mon passage chez Arm Tech Solutions m'a permis de perfectionner ma maîtrise du cycle de vie complet d'un produit, de la conception initiale au déploiement en production, en passant par l'optimisation des performances.",
 };
@@ -51,7 +51,7 @@ export const PROJECTS = [
     title: 'SAKAN',
     tagline: 'Dashboard financier & gestion Charge et Vehicule',
     description: 'Un dashboard financier complet pour la gestion immobilière. Interface moderne avec visualisation de données complexes et intégration API en temps réel.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDOGgEcjaSIaeRzSsSoGLLA79kWKDSzVVioP8beKBkwQUpygHTdO7pP2h9casD48rtMAyrLHTYBeOtQCNh50pw32qwvsXP4CukqUXXFUM1plWPxh9VzcS5vfNJ6QFvd2BVjw9Us2Km6T0SRSPb1U5hNUu2g8LCp3tGneh-Toxy0gAFbthrFIrLV8yB0apzUHtMHrCexMwopxVp8QKtKSZ6ZBxtssAKhlwZXfPNoHul2EQl2iYkvMFqNjSGWk26Fw1F7iA',
+    image: "/images/Capture d'écran 2026-07-04 002705.webp",
     tags: ['React', 'Tailwind CSS', 'Laravel', 'MySQL'],
     demoType: 'sakan-dashboard',
     githubUrl: 'https://github.com/ayoubalouhmy/sakan-real-estate',
@@ -63,23 +63,47 @@ export const PROJECTS = [
     title: 'ShopFlow',
     tagline: 'Plateforme E-Commerce Minimaliste & Éco-responsable',
     description: "Plateforme e-commerce performante avec gestion de panier complexe, authentification sécurisée et panel d'administration sur mesure pour les vendeurs.",
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCv4bfC_zT5bZo6bqwv8l3AflCyv_9gQQ12L3mPCJNbUI24r0qhKTsEOopz1uqwjngSQ78nFxpHD4t_8Ery88bxqKB-AcazlK-3SYjyjqjk_bcw7gKg4trSWkxwaMzHrhR5v8uw9bDKRUEuPTsiQcTz-TjqINfJx35ABOFCs7yMKa0f8BvBbR1q2Pjl4tEZi8RJAehGZ71X70byFYjbAB6d9CguRyFCSWE2-2oEq8k_DN54aocuNYcDZf6LhqNNLjxMxw',
-    tags: ['Laravel', 'React', 'Bootstrap', 'MySQL'],
+    image: '/images/visily-landing-page (1).webp',
+    tags: ['Laravel', 'React', 'Bootstrap', 'MySQL',"Node Js", "PhP" , 'JavaScript'],
     demoType: 'shopflow-store',
     githubUrl: 'https://github.com/ayoubalouhmy/shopflow-ecommerce',
     liveUrl: '#'
   },{
-    id: 'FlexStyle',
-    number: '03',
-    title: 'FlexStyle',
-    tagline: 'Plateforme E-Commerce Frontend',
-    description: "Plateforme e-commerce performante avec gestion de panier complexe.",
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCv4bfC_zT5bZo6bqwv8l3AflCyv_9gQQ12L3mPCJNbUI24r0qhKTsEOopz1uqwjngSQ78nFxpHD4t_8Ery88bxqKB-AcazlK-3SYjyjqjk_bcw7gKg4trSWkxwaMzHrhR5v8uw9bDKRUEuPTsiQcTz-TjqINfJx35ABOFCs7yMKa0f8BvBbR1q2Pjl4tEZi8RJAehGZ71X70byFYjbAB6d9CguRyFCSWE2-2oEq8k_DN54aocuNYcDZf6LhqNNLjxMxw',
-    tags: [ 'React', 'Tailwind CSS', 'Redux'],
-    demoType: 'flex-store',
-    githubUrl: 'https://github.com/ayoubalouhmy/shopflow-ecommerce',
-    liveUrl: '#'
-  }
+      id: 'flexstyle',
+      number: '03',
+      title: 'FlexStyle',
+      tagline: 'Plateforme E-Commerce Frontend Moderne',
+      description: "Interface e-commerce moderne et responsive permettant de parcourir les produits, gérer le panier et offrir une expérience d'achat fluide. L'application utilise React et Redux pour une gestion dynamique et efficace de l'état.",
+      image: "/images/Capture d'écran 2025-12-01 130139.webp",
+      tags: ['React', 'Tailwind CSS', 'Redux', 'JavaScript', 'Node Js', 'CSS'],
+      demoType: 'flex-store',
+      githubUrl: 'https://github.com/ayoubalouhmy/shopflow-ecommerce',
+      liveUrl: '#'
+    },
+    {
+      id: 'library',
+      number: '04',
+      title: 'Library',
+      tagline: 'Application web de gestion de bibliothèque',
+      description: "Application web de gestion de bibliothèque permettant de gérer les livres, les membres et les emprunts. Interface simple et responsive avec une gestion centralisée des données via MySQL.",
+      image: "/images/Capture d'écran 2025-08-02 160349.webp",
+      tags: ['PHP', 'Bootstrap', 'MySQL', 'CSS', 'HTML'],
+      demoType: '',
+      githubUrl: 'https://github.com/ayoubalouhmy/shopflow-ecommerce',
+      liveUrl: '#'
+    },
+    {
+      id: 'fm-academy',
+      number: '05',
+      title: 'FM Academy',
+      tagline: "Plateforme Web Éducative Moderne",
+      description: "Site web éducatif responsive conçu pour présenter des formations et faciliter la navigation des utilisateurs. L'interface utilise HTML, CSS, JavaScript et Bootstrap pour offrir une expérience claire, moderne et adaptée aux différents écrans.",
+      image: "/images/Capture d'écran 2025-08-02 160349.webp",
+      tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+      demoType: '',
+      githubUrl: 'https://github.com/ayoubalouhmy/shopflow-ecommerce',
+      liveUrl: '#'
+}
     
 ];
 

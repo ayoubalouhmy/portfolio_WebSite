@@ -74,6 +74,7 @@ body {
   animation: pulse-green 2s infinite;
 }
 
+
 /* Custom smooth scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
