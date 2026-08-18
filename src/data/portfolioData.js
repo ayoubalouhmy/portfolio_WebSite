@@ -63,7 +63,7 @@ export const PROJECTS = [
     title: 'ShopFlow',
     tagline: 'Plateforme E-Commerce Minimaliste & Éco-responsable',
     description: "Plateforme e-commerce performante avec gestion de panier complexe, authentification sécurisée et panel d'administration sur mesure pour les vendeurs.",
-    image: '/images/visily-landing-page (1).webp',
+    image: "/images/Capture d'écran 2026-05-20 101726.webp",
     tags: ['Laravel', 'React', 'Bootstrap', 'MySQL',"Node Js", "PhP" , 'JavaScript'],
     demoType: 'shopflow-store',
     githubUrl: 'https://github.com/ayoubalouhmy/shopflow-ecommerce',

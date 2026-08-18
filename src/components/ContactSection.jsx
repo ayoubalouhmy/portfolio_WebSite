@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Mail, Phone, Send, CheckCircle2, MapPin } from 'lucide-react';
 import { PROFILE_INFO } from '../data/portfolioData';
 import { TRANSLATIONS } from '../data/translations';
+import axios from 'axios';
 
 export const ContactSection = ({ lang }) => {
   const [name, setName] = useState('');
@@ -12,19 +13,28 @@ export const ContactSection = ({ lang }) => {
 
   const t = TRANSLATIONS[lang].contact;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!name || !email || !message) return;
 
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const response = await axios.post('http://localhost:5000/send-email',{name,email,message,});
+      console.log(response.data);
       setSubmitted(true);
       setName('');
       setEmail('');
       setMessage('');
-      setTimeout(() => setSubmitted(false), 5000);
-    }, 1200);
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 5000);
+
+    } catch (error) {
+      console.error('Erreur lors de l’envoi:', error);
+      alert(error.response?.data?.error ||"Échec de l'envoi du message.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
