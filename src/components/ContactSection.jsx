@@ -19,7 +19,7 @@ export const ContactSection = ({ lang }) => {
 
     setIsSubmitting(true);
     try {
-      const response = await axios.post('http://localhost:5000/send-email',{name,email,message,});
+      const response = await axios.post('https://portfolio-web-site-backend.vercel.app/send-email',{name,email,message,});
       console.log(response.data);
       setSubmitted(true);
       setName('');
